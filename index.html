@@ -6,15 +6,12 @@
     <title>Portfólio | Marlon Lotici - Desenvolvedor Front-end</title>
     <meta name="description" content="Portfólio de Marlon Lotici, um desenvolvedor front-end apaixonado por criar interfaces web elegantes e funcionais.">
     
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons via CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -34,7 +31,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-white">Marlon Lotici</a>
@@ -48,7 +44,6 @@
     </header>
 
     <main class="container mx-auto px-6">
-        <!-- Seção Hero -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
                 Marlon Lotici
@@ -59,181 +54,4 @@
             <p class="max-w-2xl mb-8">
                 Criando experiências digitais e melodias. Transformo ideias complexas em interfaces elegantes, funcionais e memoráveis.
             </p>
-            <div class="flex items-center space-x-4">
-                <a href="https://github.com/MarlonLotici" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors duration-300" title="GitHub">
-                    <i data-lucide="github" class="w-8 h-8"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marlon-lotici-902443300/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors duration-300" title="LinkedIn">
-                    <i data-lucide="linkedin" class="w-8 h-8"></i>
-                </a>
-                <a href="./seu-curriculo.pdf" target="_blank" rel="noopener noreferrer" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center space-x-2">
-                    <span>Meu Currículo</span>
-                    <i data-lucide="download" class="w-5 h-5"></i>
-                </a>
-            </div>
-        </section>
-
-        <!-- Seção Sobre Mim -->
-        <section id="sobre" class="py-24">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">Sobre Mim</h2>
-            <div class="max-w-4xl mx-auto text-lg text-center leading-relaxed">
-                <p>
-                    Olá! Sou Marlon, um desenvolvedor front-end apaixonado por criar soluções web que sejam tanto visualmente atraentes quanto tecnicamente robustas. Minha jornada na música me ensinou sobre disciplina, criatividade e a importância da harmonia – princípios que aplico diariamente ao escrever códigos e construir componentes.
-                </p>
-                <p class="mt-4">
-                    Estou sempre em busca de novos desafios e tecnologias para aprender, combinando lógica e arte para entregar a melhor experiência ao usuário.
-                </p>
-            </div>
-        </section>
-
-        <!-- Seção Habilidades -->
-        <section id="habilidades" class="py-24">
-            <h2 class="text-4xl font-bold text-center text-white mb-16">Habilidades & Ferramentas</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Linguagens</h3>
-                    <ul class="space-y-2">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Frameworks & Bibliotecas</h3>
-                    <ul class="space-y-2">
-                        <li>React.js</li>
-                        <li>Vite</li>
-                        <li>React Router</li>
-                        <li>Tailwind CSS</li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Ferramentas & Plataformas</h3>
-                    <ul class="space-y-2">
-                        <li>Git & GitHub</li>
-                        <li>Figma (Básico)</li>
-                        <li>Context API</li>
-                        <li>NPM</li>
-                    </ul>
-                </div>
-                 <div class="text-center">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Conceitos</h3>
-                    <ul class="space-y-2">
-                        <li>Design Responsivo</li>
-                        <li>Componentização</li>
-                        <li>Algoritmo Minimax</li>
-                        <li>Manipulação de DOM</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Projetos -->
-        <section id="projetos" class="py-24">
-            <h2 class="text-4xl font-bold text-center text-white mb-16">Projetos em Destaque</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-
-                <!-- Projeto Lojas Lotici -->
-                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Lojas+Lotici" alt="[Imagem do projeto Lojas Lotici]" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-3">🛍️ E-commerce Lojas Lotici</h3>
-                        <p class="mb-4">
-                            Interface de e-commerce completa e responsiva, com carrinho, filtros e checkout. Inspirado nas melhores práticas de UX de grandes varejistas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">React</span>
-                            <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vite</span>
-                            <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Context API</span>
-                            <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">CSS Moderno</span>
-                        </div>
-                        <div class="flex items-center space-x-4 mt-6">
-                            <a href="https://lojaslotici.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
-                                <span>Ver Projeto</span>
-                            </a>
-                             <a href="https://github.com/MarlonLotici/LojasLotici.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors">
-                                <i data-lucide="github" class="w-5 h-5"></i>
-                                <span>Ver Código</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Outros projetos -->
-                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Clima+e+Notícias" alt="[Imagem do projeto Clima e Notícias]" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-3">☀️ Clima e Notícias</h3>
-                        <p class="mb-4">Aplicação que oferece previsão do tempo e últimas notícias, com geolocalização e busca por cidade.</p>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">API REST</span>
-                        </div>
-                         <div class="flex items-center space-x-4 mt-6">
-                             <a href="https://clima-e-noticias.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Projeto</span></a>
-                             <a href="https://github.com/MarlonLotici/Clima-e-Not-cias.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Código</span></a>
-                        </div>
-                    </div>
-                </article>
-                
-                 <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Jogo+da+Velha" alt="[Imagem do projeto Jogo da Velha]" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-3">🎮 Jogo da Velha com IA</h3>
-                        <p class="mb-4">Jogo clássico com uma inteligência artificial que nunca perde, implementada com o algoritmo Minimax.</p>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Algoritmo</span>
-                        </div>
-                         <div class="flex items-center space-x-4 mt-6">
-                             <a href="https://aquamarine-peony-b72854.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Projeto</span></a>
-                             <a href="https://github.com/MarlonLotici/jogo-da-velha.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Código</span></a>
-                        </div>
-                    </div>
-                </article>
-                
-                 <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Portfólio+Músico" alt="[Imagem do Portfólio de Músico]" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-3">🎶 Portfólio de Músico</h3>
-                        <p class="mb-4">Um portfólio pessoal com agenda de shows, repertório e formulário de contato. Demonstra habilidades em layout e formulários.</p>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
-                             <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
-                        </div>
-                         <div class="flex items-center space-x-4 mt-6">
-                             <a href="https://marlon-lotici-musico.netlify.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Projeto</span></a>
-                             <a href="https://github.com/MarlonLotici/webpage-musica.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><span>Ver Código</span></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contato" class="py-24 text-center">
-             <h2 class="text-4xl font-bold text-center text-white mb-8">Vamos Conversar?</h2>
-             <p class="max-w-xl mx-auto mb-8">
-                 Estou aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer trocar uma ideia, sinta-se à vontade para entrar em contato.
-             </p>
-             <a href="mailto:marlonlotici6@gmail.com" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg">
-                 Mande um E-mail
-             </a>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-800">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2024 Marlon Lotici. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    
-    <!-- Script para renderizar os ícones do Lucide -->
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
-
+            <div class="flex items-center space-
