@@ -15,21 +15,11 @@
     <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827;
-            color: #d1d5db;
-        }
-        .glass-effect {
-            background: rgba(17, 24, 39, 0.8); /* Fundo um pouco mais opaco para legibilidade */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        /* Estilo para o menu móvel aberto */
-        .mobile-nav-open {
-            transform: translateX(0%);
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #111827; color: #d1d5db; }
+        .glass-effect { background: rgba(17, 24, 39, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .mobile-nav-open { transform: translateX(0%); }
+        .form-input { background-color: #1f2937; border: 1px solid #4b5563; color: #d1d5db; transition: all 0.3s; }
+        .form-input:focus { border-color: #2dd4bf; box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.5); outline: none; }
     </style>
 </head>
 <body class="antialiased">
@@ -37,27 +27,21 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-white">Marlon Lotici</a>
-            
             <nav class="hidden md:flex space-x-8">
                 <a href="#sobre" class="hover:text-white transition-colors duration-300">Sobre</a>
                 <a href="#habilidades" class="hover:text-white transition-colors duration-300">Habilidades</a>
                 <a href="#projetos" class="hover:text-white transition-colors duration-300">Projetos</a>
                 <a href="#contato" class="hover:text-white transition-colors duration-300">Contato</a>
             </nav>
-
             <div class="md:hidden">
-                <button id="menu-btn" type="button" class="text-white focus:outline-none">
-                    <i data-lucide="menu" class="w-7 h-7"></i>
-                </button>
+                <button id="menu-btn" type="button" class="text-white focus:outline-none"><i data-lucide="menu" class="w-7 h-7"></i></button>
             </div>
         </div>
     </header>
 
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
         <div class="p-6">
-            <button id="close-menu-btn" type="button" class="text-white absolute top-4 right-6 focus:outline-none">
-                <i data-lucide="x" class="w-7 h-7"></i>
-            </button>
+            <button id="close-menu-btn" type="button" class="text-white absolute top-4 right-6 focus:outline-none"><i data-lucide="x" class="w-7 h-7"></i></button>
             <nav class="mt-16 flex flex-col space-y-6">
                 <a href="#sobre" class="text-xl hover:text-cyan-400 transition-colors duration-300 mobile-nav-link">Sobre</a>
                 <a href="#habilidades" class="text-xl hover:text-cyan-400 transition-colors duration-300 mobile-nav-link">Habilidades</a>
@@ -67,7 +51,6 @@
         </div>
     </div>
 
-
     <main class="container mx-auto px-6">
         <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center pt-20">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">Marlon Lotici</h1>
@@ -76,49 +59,77 @@
             <div class="flex items-center space-x-4">
                 <a href="https://github.com/MarlonLotici" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors duration-300" title="GitHub"><i data-lucide="github" class="w-8 h-8"></i></a>
                 <a href="https://www.linkedin.com/in/marlon-lotici-902443300/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors duration-300" title="LinkedIn"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
-                <a href="./seu-curriculo.pdf" target="_blank" rel="noopener noreferrer" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center space-x-2">
+                
+                <a href="./curriculo-marlon-lotici.pdf.pdf" target="_blank" rel="noopener noreferrer" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center space-x-2">
                     <span>Meu Currículo</span>
                     <i data-lucide="download" class="w-5 h-5"></i>
                 </a>
             </div>
         </section>
-
+        
         <section id="sobre" class="py-24"><h2 class="text-4xl font-bold text-center text-white mb-12">Sobre Mim</h2><div class="max-w-4xl mx-auto text-lg text-center leading-relaxed"><p>Olá! Sou Marlon, um desenvolvedor front-end apaixonado por criar soluções web que sejam tanto visualmente atraentes quanto tecnicamente robustas. Minha jornada na música me ensinou sobre disciplina, criatividade e a importância da harmonia – princípios que aplico diariamente ao escrever códigos e construir componentes.</p><p class="mt-4">Estou sempre em busca de novos desafios e tecnologias para aprender, combinando lógica e arte para entregar a melhor experiência ao usuário.</p></div></section>
-
+        
         <section id="habilidades" class="py-24"><h2 class="text-4xl font-bold text-center text-white mb-16">Habilidades & Ferramentas</h2><div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"><div class="text-center"><h3 class="text-xl font-bold text-cyan-400 mb-4">Linguagens</h3><ul class="space-y-2"><li>HTML5</li><li>CSS3</li><li>JavaScript (ES6+)</li></ul></div><div class="text-center"><h3 class="text-xl font-bold text-cyan-400 mb-4">Frameworks & Bibliotecas</h3><ul class="space-y-2"><li>React.js</li><li>Tailwind CSS</li><li>React Router</li><li>Vite</li></ul></div><div class="text-center"><h3 class="text-xl font-bold text-cyan-400 mb-4">Ferramentas & Plataformas</h3><ul class="space-y-2"><li>Git & GitHub</li><li>Netlify</li><li>Context API</li><li>NPM</li><li>Figma (Básico)</li></ul></div><div class="text-center"><h3 class="text-xl font-bold text-cyan-400 mb-4">Conceitos</h3><ul class="space-y-2"><li>Design Responsivo</li><li>Componentização</li><li>APIs REST</li><li>Manipulação de DOM</li><li>Algoritmos (Minimax)</li></ul></div></div></section>
+        
+        <section id="projetos" class="py-24">
+            <h2 class="text-4xl font-bold text-center text-white mb-16">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="./assets/lojas-lotici.png" alt="Imagem do projeto Lojas Lotici" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🛍️ E-commerce Lojas Lotici</h3><p class="mb-4">Interface de e-commerce completa e responsiva, com carrinho, filtros e checkout, construída com as melhores práticas de componentização em React.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">React</span><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vite</span><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Context API</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://lojaslotici.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/LojasLotici.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
+                
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="./assets/assistente-virtual.png" alt="Imagem do projeto Assistente Virtual" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🤖 Assistente Virtual Interativo</h3><p class="mb-4">Funil de vendas conversacional em formato de chatbot, focado em engajamento, psicologia de vendas e captura otimizada de leads com JavaScript puro.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">UX/Vendas</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://assistente-de-simulacao-de-economia.netlify.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/IA-Assistente-Virtual-Enerzee.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
 
-        <section id="projetos" class="py-24"><h2 class="text-4xl font-bold text-center text-white mb-16">Projetos em Destaque</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto"><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Lojas+Lotici" alt="Imagem do projeto Lojas Lotici" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🛍️ E-commerce Lojas Lotici</h3><p class="mb-4">Interface de e-commerce completa e responsiva, com carrinho, filtros e checkout, construída com as melhores práticas de componentização em React.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">React</span><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vite</span><span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Context API</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://lojaslotici.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/LojasLotici.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Assistente+Virtual" alt="Imagem do projeto Assistente Virtual" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🤖 Assistente Virtual Interativo</h3><p class="mb-4">Funil de vendas conversacional em formato de chatbot, focado em engajamento, psicologia de vendas e captura otimizada de leads com JavaScript puro.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">UX/Vendas</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://assistente-de-simulacao-de-economia.netlify.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/IA-Assistente-Virtual-Enerzee.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Clima+e+Notícias" alt="Imagem do projeto Clima e Notícias" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">☀️ Clima e Notícias</h3><p class="mb-4">Aplicação que oferece previsão do tempo e últimas notícias, consumindo APIs REST com geolocalização e busca por cidade.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">API REST</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://clima-e-noticias.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/Clima-e-Not-cias.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Jogo+da+Velha" alt="Imagem do projeto Jogo da Velha" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🎮 Jogo da Velha com IA</h3><p class="mb-4">Jogo clássico com uma inteligência artificial que nunca perde, implementada com o algoritmo Minimax para demonstrar lógica de programação avançada.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Algoritmo</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://aquamarine-peony-b72854.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/jogo-da-velha.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Calculadora" alt="Imagem do projeto Calculadora" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🧮 Calculadora Funcional</h3><p class="mb-4">Uma calculadora com design moderno que realiza operações matemáticas básicas, construída para praticar a manipulação de eventos em JavaScript.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://timely-piroshki-03e5ec.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="#" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article><article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Portfólio+Músico" alt="Imagem do Portfólio de Músico" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🎶 Portfólio de Músico</h3><p class="mb-4">Um portfólio pessoal com agenda de shows, repertório e formulário de contato. Demonstra habilidades em layout e formulários web.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Formspree</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://marlon-lotici-musico.netlify.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/webpage-musica.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article></div></section>
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Clima+e+Notícias" alt="Imagem do projeto Clima e Notícias" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">☀️ Clima e Notícias</h3><p class="mb-4">Aplicação que oferece previsão do tempo e últimas notícias, consumindo APIs REST com geolocalização e busca por cidade.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">API REST</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://clima-e-noticias.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/Clima-e-Not-cias.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
+                
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Jogo+da+Velha" alt="Imagem do projeto Jogo da Velha" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🎮 Jogo da Velha com IA</h3><p class="mb-4">Jogo clássico com uma inteligência artificial que nunca perde, implementada com o algoritmo Minimax para demonstrar lógica de programação avançada.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Algoritmo</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://aquamarine-peony-b72854.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/jogo-da-velha.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
+                
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Calculadora" alt="Imagem do projeto Calculadora" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🧮 Calculadora Funcional</h3><p class="mb-4">Uma calculadora com design moderno que realiza operações matemáticas básicas, construída para praticar a manipulação de eventos em JavaScript.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://timely-piroshki-03e5ec.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="#" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
+                
+                <article class="glass-effect rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1"><img src="https://placehold.co/600x400/1f2937/d1d5db?text=Portfólio+Músico" alt="Imagem do Portfólio de Músico" class="w-full h-64 object-cover"><div class="p-6"><h3 class="text-2xl font-bold text-white mb-3">🎶 Portfólio de Músico</h3><p class="mb-4">Um portfólio pessoal com agenda de shows, repertório e formulário de contato. Demonstra habilidades em layout e formulários web.</p><div class="flex flex-wrap gap-2 mb-4"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">CSS</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Formspree</span></div><div class="flex items-center space-x-4 mt-6"><a href="https://marlon-lotici-musico.netlify.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i><span>Ver Projeto</span></a><a href="https://github.com/MarlonLotici/webpage-musica.git" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-white font-semibold flex items-center space-x-1 transition-colors"><i data-lucide="github" class="w-5 h-5"></i><span>Ver Código</span></a></div></div></article>
 
-        <section id="contato" class="py-24 text-center"><h2 class="text-4xl font-bold text-center text-white mb-8">Vamos Conversar?</h2><p class="max-w-xl mx-auto mb-8">Estou aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer trocar uma ideia, sinta-se à vontade para entrar em contato.</p><a href="mailto:marlonlotici6@gmail.com" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg">Mande um E-mail</a></section>
+            </div>
+        </section>
+
+        <section id="contato" class="py-24">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Vamos Conversar?</h2>
+            <p class="max-w-xl mx-auto text-center mb-12">
+                Estou aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer trocar uma ideia, preencha o formulário abaixo.
+            </p>
+            
+            <form action="https://formspree.io/f/xanpjebn" method="POST" class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">Seu Nome</label>
+                    <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md p-3 form-input focus:ring-0">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">Seu E-mail</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md p-3 form-input focus:ring-0">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300">Mensagem</label>
+                    <textarea name="message" id="message" rows="5" required class="mt-1 block w-full rounded-md p-3 form-input focus:ring-0"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg">
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer class="border-t border-gray-800"><div class="container mx-auto px-6 py-8 text-center text-gray-400"><p>&copy; 2025 Marlon Lotici. Todos os direitos reservados.</p></div></footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Renderiza todos os ícones da página
             lucide.createIcons();
-
-            // Lógica para o menu móvel
             const menuBtn = document.getElementById('menu-btn');
             const closeMenuBtn = document.getElementById('close-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('mobile-nav-open');
-            });
-
-            closeMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('mobile-nav-open');
-            });
-            
-            // Fecha o menu ao clicar em um link
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('mobile-nav-open');
-                });
-            });
+            menuBtn.addEventListener('click', () => { mobileMenu.classList.add('mobile-nav-open'); });
+            closeMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('mobile-nav-open'); });
+            mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('mobile-nav-open'); }); });
         });
     </script>
 </body>
